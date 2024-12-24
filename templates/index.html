@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список подарков</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/0d/c8/b4/0dc8b405a504c0f17bce83116c104f3f.jpg');
+            background-size: cover;
+            background-position: center;
+            color: black;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список подарков на Новый Год</h1>
+    <table>
+        <tr>
+            <th>ФИО</th>
+            <th>Название подарка</th>
+            <th>Стоимость</th>
+            <th>Статус</th>
+        </tr>
+        {% for gift in gifts %}
+        <tr>
+            <td>{{ gift[1] }}</td>
+            <td>{{ gift[2] }}</td>
+            <td>{{ gift[3] }}</td>
+            <td>{{ gift[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
